@@ -70,6 +70,8 @@ line-crossing-Exit=372;761;335;854;14;865;641;878
 line-crossing-Entry=257;1065;274;931;14;905;641;918
 line-crossing-Exit2=480;559;483;525;375;562;540;560
 line-crossing-Entry2=483;605;480;639;375;592;540;590
+line-crossing-CarExit=1229;755;1404;818;768;911;1692;626
+line-crossing-CarEntry=747;542;794;577;586;559;861;516
 #line_color=0.75;0.25;0;1
 class-id=0
 #extended when 0- only counts crossing on the configured Line

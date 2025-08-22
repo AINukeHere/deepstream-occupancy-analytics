@@ -44,9 +44,12 @@ analytics_custom_parse_nvdsanalytics_meta_data (NvDsMetaList *l_user, AnalyticsU
 	data->lcc_cnt_entry = 0;
 	data->lcc_cnt_exit = 0;
 	data->lccum_cnt = 0;
-	data->lcc_cnt_entry = meta->objLCCumCnt["Entry"] + meta->objLCCumCnt["Entry2"];
-	data->lcc_cnt_exit = meta->objLCCumCnt["Exit"] + meta->objLCCumCnt["Exit2"];
-	data->lccum_cnt = data->lcc_cnt_entry - data->lcc_cnt_exit;
+	data->lcc_cnt_entry = meta->objLCCumCnt["CarEntry"];
+	data->lcc_cnt_exit = meta->objLCCumCnt["CarExit"];
+	// data->lcc_cnt_entry = meta->objLCCumCnt["Entry"] + meta->objLCCumCnt["Entry2"];
+	// data->lcc_cnt_exit = meta->objLCCumCnt["Exit"] + meta->objLCCumCnt["Exit2"];
+	if (data->lcc_cnt_entry > data->lcc_cnt_exit)
+		data->lccum_cnt = data->lcc_cnt_entry - data->lcc_cnt_exit;
 	g_print("Enter: %d, Exit: %d\n", data->lcc_cnt_entry,data->lcc_cnt_exit);
 }
 
